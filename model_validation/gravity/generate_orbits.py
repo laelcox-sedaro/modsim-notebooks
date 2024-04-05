@@ -3,8 +3,8 @@ from pathlib import Path
 
 import numpy as np
 
-DRAG_TEMPLATE = 'PLCPJGPjTVrxC4fZv3KSZB'
-SRP_TEMPLATE = 'PLCPJ4X22Nb6Mz9nJyfQkM'
+DRAG_TEMPLATE = 'PLyQYL4K8xxb5PJWhRthFj'
+SRP_TEMPLATE = 'PLyQYSBjz3P38b3FgvHq7l'
 
 
 if __name__ == '__main__':

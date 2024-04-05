@@ -13,13 +13,14 @@ from sedaro import SedaroApiClient
 
 PATH = Path(__file__).parent
 
-SCENARIO_ID = 'PLCPJHKtysym8fHJVxslm3'
+SCENARIO_ID = 'PLyQYl5n3gpCJnfRGTZS8J'
 
 if __name__ == '__main__':
 
     # Load API key
     with open(PATH / '../../secrets.json', 'r') as file:
         API_KEY = json.load(file)['API_KEY']
+        # API_KEY = json.load(file)['LOCAL_API_KEY']
 
     # Load the orbit configurations
     with open(PATH / 'orbits.json', 'r') as file:
@@ -27,12 +28,16 @@ if __name__ == '__main__':
 
     # Initialize API client
     sedaro = SedaroApiClient(API_KEY, host='https://api.sedaro.com')
+    # sedaro = SedaroApiClient(API_KEY, host='http://localhost:80')
     scenario = sedaro.scenario(SCENARIO_ID)
 
     # Build new agent blocks
     blocks = []
+    # print(orbits.items())
     for name, entry in orbits.items():
+        # print(name, entry, orbits.items())
         template = entry.get('template', None)
+        print(template)
         a = (entry['hp'] + 6378.137) / (1 - entry['e'])
         orbit = {
             'id': f'${name}',
