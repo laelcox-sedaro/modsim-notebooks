@@ -3,6 +3,7 @@
 secrets.json
 hello_world.py
 results_api_demo.py
+config.json
 *.bak
 flower_constellation.py
 build_superdove_constellation.py
