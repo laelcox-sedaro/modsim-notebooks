@@ -1,6 +1,8 @@
 {
   "HOST": "https://api.sedaro.com",
+  "ASTAGE_HOST": "https://api.astage.sedaro.com",
   "WEB_HOST": "https://satellite.sedaro.com",
+  "LOCAL_HOST": "http://localhost:80",
   "WILDFIRE": {
     "AGENT_TEMPLATE_BRANCH_ID": "<your branch id here>",
     "SCENARIO_BRANCH_ID": "<your branch id here>"
